@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #0f172a, #020617);
+    background: radial-gradient(circle at top, #020617, #000000);
     color: #e5e7eb;
 }
 
-/* NAVBAR */
+/* NAVBAR (GLASS) */
 .navbar {
     position: fixed;
     width: 100%;
@@ -14,31 +14,30 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(15, 23, 42, 0.5);
-    backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
     z-index: 1000;
 }
 
 .navbar h2 {
-    background: linear-gradient(90deg, #ff7a00, #ffb347);
-    -webkit-background-clip: text;
-    color: transparent;
+    color: white;
 }
 
 .navbar button {
-    background: linear-gradient(135deg, #ff7a00, #ff9a3c);
+    background: rgba(255,122,0,0.9);
     border: none;
     padding: 8px 18px;
     color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .navbar button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255,122,0,0.6);
+    box-shadow: 0 0 15px rgba(255,122,0,0.7);
 }
 
 /* HERO */
@@ -52,38 +51,36 @@ body {
     text-align: center;
 }
 
-/* GRADIENT OVERLAY */
+/* DARK OVERLAY */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-        to bottom,
-        rgba(2,6,23,0.6),
-        rgba(2,6,23,0.95)
-    );
+    background: rgba(0,0,0,0.75);
 }
 
-/* HERO CONTENT */
+/* HERO GLASS BOX */
 .hero-content {
     position: relative;
     max-width: 720px;
-}
+    padding: 40px;
 
-/* HEADING */
-.hero-content h1 {
-    font-size: 56px;
-    margin-bottom: 20px;
-    background: linear-gradient(90deg, #ffffff, #cbd5e1);
-    -webkit-background-clip: text;
-    color: transparent;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 /* TEXT */
+.hero-content h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: white;
+}
+
 .hero-content p {
-    font-size: 18px;
     color: #cbd5e1;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* BUTTONS */
@@ -98,14 +95,14 @@ body {
     border-radius: 10px;
     border: none;
     cursor: pointer;
-    background: linear-gradient(135deg, #ff7a00, #ffb347);
+
+    background: rgba(255,122,0,0.9);
     color: white;
     transition: 0.3s;
 }
 
 .buttons button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 20px rgba(255,122,0,0.6);
+    box-shadow: 0 0 20px rgba(255,122,0,0.8);
 }
 
 /* SECONDARY */
@@ -115,19 +112,10 @@ body {
     color: #cbd5e1;
 }
 
-.secondary:hover {
-    background: rgba(255,255,255,0.1);
-}
-
 /* DESTINATIONS */
 .destinations {
     padding: 100px 40px;
     text-align: center;
-}
-
-.destinations h2 {
-    font-size: 30px;
-    margin-bottom: 10px;
 }
 
 /* CARD CONTAINER */
@@ -139,25 +127,24 @@ body {
     flex-wrap: wrap;
 }
 
-/* PREMIUM GLASS CARDS */
+/* GLASS CARDS */
 .card {
-    position: relative;
     width: 270px;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
 
     background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(20px);
     border: 1px solid rgba(255,255,255,0.08);
 
     transition: 0.4s;
 }
 
-/* HOVER EFFECT */
+/* HOVER */
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 }
 
 /* IMAGE */
@@ -172,5 +159,4 @@ body {
     padding: 15px;
     font-size: 20px;
     color: white;
-    text-align: left;
 }
