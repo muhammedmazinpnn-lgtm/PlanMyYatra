@@ -6,41 +6,43 @@
 </head>
 <body>
 
-    <!-- HERO SECTION -->
-    <header class="hero">
-        <h1>PlanMyYatra</h1>
-        <p>Your Journey, Perfectly Planned</p>
-        <button onclick="scrollToDest()">Start Planning</button>
-    </header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>PlanMyYatra</h2>
+        <button onclick="scrollToDest()">Explore</button>
+    </nav>
 
-    <!-- INTRO SECTION -->
-    <section class="intro">
-        <h2>Explore India Smartly</h2>
-        <p>
-            Plan your trips across India with customized itineraries based on your budget,
-            time, and travel style. Choose your destination, set your preferences,
-            and let us build your perfect journey.
-        </p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Design Your Perfect Journey</h1>
+            <p>Smart trip planning across India with personalized itineraries and budgets.</p>
+            <button onclick="scrollToDest()">Start Planning</button>
+        </div>
     </section>
 
     <!-- DESTINATIONS -->
     <section class="destinations" id="destinations">
+        <h2>Popular Destinations</h2>
 
-        <div class="card" onclick="goTo('goa.html')">
-            <img src="https://source.unsplash.com/400x300/?goa,beach">
-            <h3>Goa</h3>
+        <div class="card-container">
+
+            <div class="card" onclick="goTo('goa.html')">
+                <img src="https://source.unsplash.com/400x300/?goa,beach">
+                <div class="card-text">Goa</div>
+            </div>
+
+            <div class="card" onclick="goTo('manali.html')">
+                <img src="https://source.unsplash.com/400x300/?manali,mountains">
+                <div class="card-text">Manali</div>
+            </div>
+
+            <div class="card" onclick="goTo('jaipur.html')">
+                <img src="https://source.unsplash.com/400x300/?jaipur,fort">
+                <div class="card-text">Jaipur</div>
+            </div>
+
         </div>
-
-        <div class="card" onclick="goTo('manali.html')">
-            <img src="https://source.unsplash.com/400x300/?manali,mountains">
-            <h3>Manali</h3>
-        </div>
-
-        <div class="card" onclick="goTo('jaipur.html')">
-            <img src="https://source.unsplash.com/400x300/?jaipur,fort">
-            <h3>Jaipur</h3>
-        </div>
-
     </section>
 
     <script>
