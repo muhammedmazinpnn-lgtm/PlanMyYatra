@@ -22,12 +22,16 @@ body {
     z-index: 1000;
 }
 
+/* LOGO GRADIENT */
 .navbar h2 {
-    color: white;
+    background: linear-gradient(90deg, #ff7a00, #ff3d81, #7c3aed);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
+/* NAV BUTTON */
 .navbar button {
-    background: rgba(255,122,0,0.9);
+    background: linear-gradient(135deg, #ff7a00, #ff3d81);
     border: none;
     padding: 8px 18px;
     color: white;
@@ -37,7 +41,7 @@ body {
 }
 
 .navbar button:hover {
-    box-shadow: 0 0 15px rgba(255,122,0,0.7);
+    box-shadow: 0 0 15px rgba(255, 61, 129, 0.7);
 }
 
 /* HERO */
@@ -51,15 +55,19 @@ body {
     text-align: center;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.75);
+    background: linear-gradient(
+        to bottom,
+        rgba(2,6,23,0.6),
+        rgba(2,6,23,0.95)
+    );
 }
 
-/* HERO GLASS BOX */
+/* HERO CONTENT (GLASS) */
 .hero-content {
     position: relative;
     max-width: 720px;
@@ -71,13 +79,17 @@ body {
     border: 1px solid rgba(255,255,255,0.1);
 }
 
-/* TEXT */
+/* HEADING */
 .hero-content h1 {
     font-size: 52px;
     margin-bottom: 20px;
-    color: white;
+
+    background: linear-gradient(90deg, #ffffff, #ffb347);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
+/* TEXT */
 .hero-content p {
     color: #cbd5e1;
     margin-bottom: 25px;
@@ -96,16 +108,17 @@ body {
     border: none;
     cursor: pointer;
 
-    background: rgba(255,122,0,0.9);
+    background: linear-gradient(135deg, #ff7a00, #ff3d81);
     color: white;
     transition: 0.3s;
 }
 
 .buttons button:hover {
-    box-shadow: 0 0 20px rgba(255,122,0,0.8);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255, 61, 129, 0.7);
 }
 
-/* SECONDARY */
+/* SECONDARY BUTTON */
 .secondary {
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
@@ -116,6 +129,11 @@ body {
 .destinations {
     padding: 100px 40px;
     text-align: center;
+}
+
+.destinations h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 /* CARD CONTAINER */
