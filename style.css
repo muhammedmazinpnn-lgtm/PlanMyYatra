@@ -1,10 +1,12 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: radial-gradient(circle at top, #020617, #000000);
     color: #e5e7eb;
-}
 
+    background: linear-gradient(-45deg, #020617, #0f172a, #1e1b4b, #020617);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
 /* NAVBAR (GLASS) */
 .navbar {
     position: fixed;
