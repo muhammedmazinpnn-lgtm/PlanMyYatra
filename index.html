@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PlanMyYatra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>PlanMyYatra</h1>
+        <p>Plan Smart. Travel Better.</p>
+    </header>
+
+    <section class="destinations">
+
+        <div class="card" onclick="goTo('goa.html')">
+            <img src="https://source.unsplash.com/300x200/?goa,beach">
+            <h2>Goa</h2>
+        </div>
+
+        <div class="card" onclick="goTo('manali.html')">
+            <img src="https://source.unsplash.com/300x200/?manali,mountains">
+            <h2>Manali</h2>
+        </div>
+
+        <div class="card" onclick="goTo('jaipur.html')">
+            <img src="https://source.unsplash.com/300x200/?jaipur,fort">
+            <h2>Jaipur</h2>
+        </div>
+
+    </section>
+
+    <script>
+        function goTo(page) {
+            window.location.href = page;
+        }
+    </script>
+
+</body>
+</html>
