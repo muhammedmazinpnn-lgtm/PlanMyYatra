@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #0b1220;
+    background: radial-gradient(circle at top, #0f172a, #020617);
     color: #e5e7eb;
 }
 
@@ -14,28 +14,31 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgba(15, 23, 42, 0.6);
-    backdrop-filter: blur(12px);
-    z-index: 1000;
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255,255,255,0.05);
+    z-index: 1000;
 }
 
 .navbar h2 {
-    color: #ffffff;
+    background: linear-gradient(90deg, #ff7a00, #ffb347);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .navbar button {
     background: linear-gradient(135deg, #ff7a00, #ff9a3c);
     border: none;
-    padding: 8px 16px;
+    padding: 8px 18px;
     color: white;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .navbar button:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255,122,0,0.6);
 }
 
 /* HERO */
@@ -49,15 +52,15 @@ body {
     text-align: center;
 }
 
-/* DARK OVERLAY (stronger for premium look) */
+/* GRADIENT OVERLAY */
 .overlay {
     position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(
         to bottom,
-        rgba(5, 10, 25, 0.7),
-        rgba(5, 10, 25, 0.9)
+        rgba(2,6,23,0.6),
+        rgba(2,6,23,0.95)
     );
 }
 
@@ -65,18 +68,18 @@ body {
 .hero-content {
     position: relative;
     max-width: 720px;
-    padding: 20px;
 }
 
 /* HEADING */
 .hero-content h1 {
     font-size: 56px;
-    line-height: 1.2;
     margin-bottom: 20px;
-    color: #ffffff;
+    background: linear-gradient(90deg, #ffffff, #cbd5e1);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-/* PARAGRAPH */
+/* TEXT */
 .hero-content p {
     font-size: 18px;
     color: #cbd5e1;
@@ -92,28 +95,28 @@ body {
 
 .buttons button {
     padding: 12px 26px;
-    font-size: 16px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
-    background: linear-gradient(135deg, #ff7a00, #ff9a3c);
+    background: linear-gradient(135deg, #ff7a00, #ffb347);
     color: white;
     transition: 0.3s;
 }
 
 .buttons button:hover {
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(255,122,0,0.6);
 }
 
-/* SECONDARY BUTTON */
+/* SECONDARY */
 .secondary {
-    background: transparent;
-    border: 1px solid #cbd5e1;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
     color: #cbd5e1;
 }
 
 .secondary:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.1);
 }
 
 /* DESTINATIONS */
@@ -123,7 +126,7 @@ body {
 }
 
 .destinations h2 {
-    font-size: 28px;
+    font-size: 30px;
     margin-bottom: 10px;
 }
 
@@ -131,25 +134,30 @@ body {
 .card-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 30px;
     margin-top: 40px;
     flex-wrap: wrap;
 }
 
-/* CARDS */
+/* PREMIUM GLASS CARDS */
 .card {
     position: relative;
-    width: 260px;
-    border-radius: 14px;
+    width: 270px;
+    border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    background: #111827;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
-    transition: 0.3s;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    transition: 0.4s;
 }
 
+/* HOVER EFFECT */
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* IMAGE */
@@ -159,16 +167,10 @@ body {
     object-fit: cover;
 }
 
-/* TEXT OVERLAY */
+/* TEXT */
 .card-text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     padding: 15px;
-    background: linear-gradient(
-        transparent,
-        rgba(0,0,0,0.9)
-    );
     font-size: 20px;
-    color: #ffffff;
+    color: white;
+    text-align: left;
 }
