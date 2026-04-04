@@ -6,26 +6,39 @@
 </head>
 <body>
 
-    <header>
+    <!-- HERO SECTION -->
+    <header class="hero">
         <h1>PlanMyYatra</h1>
-        <p>Plan Smart. Travel Better.</p>
+        <p>Your Journey, Perfectly Planned</p>
+        <button onclick="scrollToDest()">Start Planning</button>
     </header>
 
-    <section class="destinations">
+    <!-- INTRO SECTION -->
+    <section class="intro">
+        <h2>Explore India Smartly</h2>
+        <p>
+            Plan your trips across India with customized itineraries based on your budget,
+            time, and travel style. Choose your destination, set your preferences,
+            and let us build your perfect journey.
+        </p>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section class="destinations" id="destinations">
 
         <div class="card" onclick="goTo('goa.html')">
-            <img src="https://source.unsplash.com/300x200/?goa,beach">
-            <h2>Goa</h2>
+            <img src="https://source.unsplash.com/400x300/?goa,beach">
+            <h3>Goa</h3>
         </div>
 
         <div class="card" onclick="goTo('manali.html')">
-            <img src="https://source.unsplash.com/300x200/?manali,mountains">
-            <h2>Manali</h2>
+            <img src="https://source.unsplash.com/400x300/?manali,mountains">
+            <h3>Manali</h3>
         </div>
 
         <div class="card" onclick="goTo('jaipur.html')">
-            <img src="https://source.unsplash.com/300x200/?jaipur,fort">
-            <h2>Jaipur</h2>
+            <img src="https://source.unsplash.com/400x300/?jaipur,fort">
+            <h3>Jaipur</h3>
         </div>
 
     </section>
@@ -33,6 +46,12 @@
     <script>
         function goTo(page) {
             window.location.href = page;
+        }
+
+        function scrollToDest() {
+            document.getElementById("destinations").scrollIntoView({
+                behavior: "smooth"
+            });
         }
     </script>
 
