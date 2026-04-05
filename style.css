@@ -1,6 +1,10 @@
+html, body {
+    overflow-x: hidden;
+}
 /* BODY */
 body {
     margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background: #000000;
     color: #e5e7eb;
@@ -108,15 +112,15 @@ body::before {
 /* CARD CONTAINER */
 .card-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding-top: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 15px;
 }
 
 /* CARDS */
 .card {
     width: 100%;
-    aspect-ratio: 3/2;
+    aspect-ratio:3 / 2 ;
 }
 
 .card:hover {
