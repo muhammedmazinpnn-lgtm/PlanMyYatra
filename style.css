@@ -19,23 +19,26 @@ body::before {
 /* NAVBAR */
 .navbar {
     position: fixed;
-    width: 100%;
     top: 0;
-    padding: 15px 40px;
+    width: 100%;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background: #000000;
+    padding: 15px 40px;
+
+    background: #000;
     border-bottom: 1px solid rgba(255,255,255,0.1);
-    z-index: 1000;
 }
 
-.navbar h2 {
-    color: white;
+/* RIGHT SIDE */
+.nav-right {
+    display: flex;
+    align-items: center;
 }
 
+/* BUTTON */
 .navbar button {
     background: linear-gradient(135deg, #ff7a00, #ff3d81);
     border: none;
