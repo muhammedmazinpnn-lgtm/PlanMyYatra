@@ -107,23 +107,16 @@ body::before {
 
 /* CARD CONTAINER */
 .card-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    flex-wrap: wrap;
+    padding-top: 30px;
 }
 
 /* CARDS */
 .card {
-    width: 260px;
-    border-radius: 10px;
-    overflow: hidden;
-    cursor: pointer;
-
-    background: #111;
-    border: 1px solid rgba(255,255,255,0.05);
-
-    transition: 0.3s;
+    width: 100%;
+    aspect-ratio: 3/2;
 }
 
 .card:hover {
@@ -183,5 +176,10 @@ body::before {
     .card {
         width: 100%;
         max-width: 320px;
+    }
+}
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
