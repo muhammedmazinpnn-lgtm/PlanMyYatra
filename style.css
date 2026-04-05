@@ -121,7 +121,7 @@ body::before {
 .card-container {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -190,3 +190,49 @@ body::before {
     font-size: 18px;
     color: #cbd5e1;
 }
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        padding: 100px 20px;
+    }
+}
+
+    /* NAVBAR */
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar h2 {
+        font-size: 18px;
+    }
+
+    /* HERO TEXT */
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    /* BUTTONS STACK */
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 100%;
+    }
+
+    /* DESTINATIONS */
+    .destinations {
+        padding: 60px 20px;
+    }
+
+    /* CARDS FULL WIDTH */
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
