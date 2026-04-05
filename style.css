@@ -16,39 +16,29 @@ body::before {
     z-index: -1;
 }
 
-/* NAVBAR */
-.navbar {
-    position: fixed;
+/* HEADER (MINIMAL TOP BAR) */
+.header {
+    position: absolute;
     top: 0;
     width: 100%;
+
+    padding: 20px 40px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 15px 40px;
-
-    background: #000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    z-index: 100;
 }
 
-/* RIGHT SIDE */
-.nav-right {
-    display: flex;
-    align-items: center;
-}
-
-/* BUTTON */
-.navbar button {
-    background: linear-gradient(135deg, #ff7a00, #ff3d81);
-    border: none;
-    padding: 8px 16px;
+/* LOGO */
+.logo {
     color: white;
-    border-radius: 6px;
-    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
 }
 
-/* HERO (FIXED - ONLY ONE VERSION) */
+/* HERO */
 .hero {
     position: relative;
     height: 100vh;
@@ -70,6 +60,7 @@ body::before {
 /* HERO CONTENT */
 .hero-content {
     max-width: 650px;
+    margin-top: 40px;
 }
 
 .hero-content h1 {
@@ -99,9 +90,11 @@ body::before {
 
     background: linear-gradient(135deg, #ff7a00, #ff3d81);
     color: white;
+    font-size: 15px;
 }
 
 .buttons button:hover {
+    transform: translateY(-2px);
     box-shadow: 0 0 20px rgba(255, 61, 129, 0.7);
 }
 
@@ -112,7 +105,7 @@ body::before {
     background: #050505;
 }
 
-/* CARDS */
+/* CARD CONTAINER */
 .card-container {
     display: flex;
     justify-content: center;
@@ -120,6 +113,7 @@ body::before {
     flex-wrap: wrap;
 }
 
+/* CARDS */
 .card {
     width: 260px;
     border-radius: 10px;
@@ -153,11 +147,11 @@ body::before {
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
 
-    .navbar {
-        padding: 12px 20px;
+    .header {
+        padding: 15px 20px;
     }
 
-    .navbar h2 {
+    .logo {
         font-size: 18px;
     }
 
@@ -190,60 +184,4 @@ body::before {
         width: 100%;
         max-width: 320px;
     }
-}
-/* HEADER */
-.header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-
-    padding: 20px 40px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    z-index: 100;
-}
-
-/* LOGO */
-.logo {
-    color: white;
-    font-size: 22px;
-    font-weight: 600;
-}
-
-.planner {
-    margin-top: 30px;
-
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-
-    background: rgba(255,255,255,0.08);
-    padding: 12px;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-}
-
-/* INPUTS */
-.planner input {
-    padding: 10px;
-    border: none;
-    border-radius: 6px;
-    outline: none;
-
-    background: rgba(255,255,255,0.1);
-    color: white;
-}
-
-/* BUTTON */
-.planner button {
-    padding: 10px 18px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-
-    background: linear-gradient(135deg, #ff7a00, #ff3d81);
-    color: white;
 }

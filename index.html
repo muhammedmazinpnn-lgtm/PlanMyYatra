@@ -5,53 +5,32 @@
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-    <h2>PlanMyYatra</h2>
-
-    <div class="nav-right">
-        <button>Explore</button>
-    </div>
-</nav>
-<!-- HEADER -->
-
+    <!-- HEADER (MINIMAL TOP BAR) -->
     <header class="header">
         <h2 class="logo">PlanMyYatra</h2>
     </header>
 
     <!-- HERO -->
-   <section class="hero">
-    <div class="overlay"></div>
+    <section class="hero">
 
-    <div class="hero-content">
-        <h1>
-            Plan Your Journey Across India
-        </h1>
+        <div class="hero-content">
+            <h1>Plan Your Journey Across India</h1>
 
-        <p>
-            Create personalized travel plans based on your budget, time, and preferences.
-            Explore destinations, build itineraries, and travel smarter.
-        </p>
+            <p>
+                Create personalized travel plans based on your budget, time, and preferences.
+                Explore destinations, build itineraries, and travel smarter.
+            </p>
 
-        <div class="buttons">
-            <button onclick="scrollToDest()">Start Planning</button>
-            <button class="secondary">Explore Destinations</button>
+            <div class="buttons">
+                <button onclick="scrollToDest()">Start Planning</button>
+                <button class="secondary" onclick="scrollToDest()">Explore Destinations</button>
+            </div>
         </div>
-    </div>
-</section>
-<div class="planner">
 
-    <input type="text" placeholder="Where to?">
-
-    <input type="number" placeholder="Days">
-
-    <input type="number" placeholder="Budget ₹">
-
-    <button>Plan Trip</button>
-
-</div>
+    </section>
 
     <!-- DESTINATIONS -->
     <section class="destinations" id="destinations">
@@ -60,19 +39,20 @@
         <div class="card-container">
 
             <div class="card" onclick="goTo('goa.html')">
-    <img src="images/goa img.jpg">
-    <div class="card-text">Goa</div>
-</div>
+                <img src="images/goa img.jpg">
+                <div class="card-text">Goa</div>
+            </div>
 
-<div class="card" onclick="goTo('manali.html')">
-    <img src="images/manali img.jpg">
-    <div class="card-text">Manali</div>
-</div>
+            <div class="card" onclick="goTo('manali.html')">
+                <img src="images/manali img.jpg">
+                <div class="card-text">Manali</div>
+            </div>
 
-<div class="card" onclick="goTo('jaipur.html')">
-    <img src="images/jaipur img.jpg">
-    <div class="card-text">Jaipur</div>
-</div>
+            <div class="card" onclick="goTo('jaipur.html')">
+                <img src="images/jaipur img.jpg">
+                <div class="card-text">Jaipur</div>
+            </div>
+
         </div>
     </section>
 
