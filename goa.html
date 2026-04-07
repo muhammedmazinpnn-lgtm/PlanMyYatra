@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Goa Trip - PlanMyYatra</title>
+    <title>Trip Planner - PlanMyYatra</title>
 </head>
 <body>
 
-<h1>Goa Trip Planner</h1>
+<h1 id="title"></h1>
 
 <label>Days:</label>
 <input type="number" id="days"><br><br>
@@ -18,21 +18,61 @@
 <div id="result"></div>
 
 <script>
+
+// GET PLACE FROM URL
+const params = new URLSearchParams(window.location.search);
+const place = params.get("place");
+
+document.getElementById("title").innerText = place.toUpperCase() + " Trip Planner";
+
+// GENERATE PLAN
 function generate() {
     let days = document.getElementById("days").value;
     let result = document.getElementById("result");
 
-    if(days == 3){
+    if(place === "goa"){
+        if(days == 3){
+            result.innerHTML = `
+            <h3>3-Day Goa Plan</h3>
+            Day 1: Beach + Hotel<br>
+            Day 2: Water Sports + Fort<br>
+            Day 3: Shopping + Return
+            `;
+        }
+    }
+
+    else if(place === "manali"){
         result.innerHTML = `
-        <h3>3-Day Goa Plan</h3>
-        Day 1: Beach + Hotel<br>
-        Day 2: Water Sports + Fort<br>
-        Day 3: Shopping + Return
+        <h3>Manali Plan</h3>
+        Day 1: Arrival + Mall Road<br>
+        Day 2: Solang Valley + Snow Activities<br>
+        Day 3: Rohtang Pass + Return
         `;
-    } else {
-        result.innerHTML = "Basic Goa trip plan available.";
+    }
+
+    else if(place === "jaipur"){
+        result.innerHTML = `
+        <h3>Jaipur Plan</h3>
+        Day 1: Amber Fort + City Palace<br>
+        Day 2: Hawa Mahal + Markets<br>
+        Day 3: Local Shopping + Return
+        `;
+    }
+
+    else if(place === "kashmir"){
+        result.innerHTML = `
+        <h3>Kashmir Plan</h3>
+        Day 1: Srinagar + Dal Lake<br>
+        Day 2: Gulmarg Snow + Gondola<br>
+        Day 3: Pahalgam + Return
+        `;
+    }
+
+    else {
+        result.innerHTML = "Plan not available.";
     }
 }
+
 </script>
 
 </body>
