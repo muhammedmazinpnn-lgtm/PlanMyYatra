@@ -77,7 +77,7 @@ body::before {
 .hero-content p {
     font-size: 18px;
     color: #cbd5e1;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 /* BUTTONS */
@@ -89,7 +89,7 @@ body::before {
 
 .buttons button {
     padding: 12px 24px;
-    border-radius: 8px;
+    border-radius: 10px;
     border: none;
     cursor: pointer;
 
@@ -100,8 +100,8 @@ body::before {
 }
 
 .buttons button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(255, 61, 129, 0.7);
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 61, 129, 0.6);
 }
 
 /* DESTINATIONS */
@@ -115,26 +115,26 @@ body::before {
 .card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    padding-top: 30px;
+    gap: 28px;
+    padding-top: 40px;
 }
 
 /* CARD */
 .card {
-    border-radius: 18px;
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
 
-    background: #111;
-    border: 1px solid rgba(255,255,255,0.05);
+    background: #0f0f0f;
+    border: 1px solid rgba(255,255,255,0.06);
 
-    transition: 0.4s;
+    transition: all 0.35s ease;
 }
 
 /* IMAGE */
 .card-image {
     width: 100%;
-    height: 180px;
+    height: 200px;
     overflow: hidden;
 }
 
@@ -142,26 +142,26 @@ body::before {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: 0.4s;
+    transition: 0.5s ease;
 }
 
 /* CONTENT */
 .card-content {
-    padding: 14px;
-    text-align: left;
+    padding: 16px;
 }
 
 /* TITLE */
 .card-content h3 {
     margin: 0;
     font-size: 18px;
+    font-weight: 600;
     color: white;
 }
 
 /* DESCRIPTION */
 .card-content p {
-    margin: 5px 0;
-    font-size: 14px;
+    margin: 6px 0 12px;
+    font-size: 13px;
     color: #9ca3af;
 }
 
@@ -169,19 +169,32 @@ body::before {
 .card-info {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 14px;
-    margin-top: 10px;
-    color: #e5e7eb;
+}
+
+/* RATING */
+.card-info span:first-child {
+    color: #facc15;
+    font-weight: 500;
+}
+
+/* PRICE */
+.card-info span:last-child {
+    color: #ff7a00;
+    font-weight: 600;
 }
 
 /* HOVER */
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+    transform: translateY(-12px);
+    box-shadow:
+        0 25px 50px rgba(0,0,0,0.7),
+        0 0 20px rgba(255, 122, 0, 0.15);
 }
 
 .card:hover img {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 /* TABLET */
@@ -229,5 +242,6 @@ body::before {
 
     .card-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
     }
 }
